@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1E1035"/>
+      <stop offset="60%" stop-color="#0E0B1F"/>
+      <stop offset="100%" stop-color="#07060D"/>
+    </radialGradient>
+    <radialGradient id="nebulaCyan" cx="35%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#4FACFE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebulaMagenta" cx="65%" cy="38%" r="48%">
+      <stop offset="0%" stop-color="#FF0080" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#D946EF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebulaViolet" cx="50%" cy="65%" r="45%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#6366F1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="25%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FDE047" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#EC4899" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cosmicGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="512" height="512" rx="112" fill="url(#spaceBg)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="rgba(139, 92, 246, 0.4)" stroke-width="3"/>
+
+  <!-- Nebula Gas Clouds with Screen Blending -->
+  <g style="mix-blend-mode: screen;" filter="url(#cosmicGlow)">
+    <circle cx="210" cy="220" r="160" fill="url(#nebulaCyan)"/>
+    <circle cx="310" cy="210" r="170" fill="url(#nebulaMagenta)"/>
+    <circle cx="256" cy="310" r="150" fill="url(#nebulaViolet)"/>
+  </g>
+
+  <!-- Glowing Core -->
+  <circle cx="256" cy="256" r="90" fill="url(#coreGlow)"/>
+
+  <!-- Orbiting Stardust -->
+  <circle cx="180" cy="180" r="4.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="340" cy="190" r="3.5" fill="#00F2FE" opacity="0.95"/>
+  <circle cx="330" cy="320" r="4.0" fill="#FF0080" opacity="0.85"/>
+  <circle cx="190" cy="330" r="3.0" fill="#FDE047" opacity="0.9"/>
+  <circle cx="256" cy="150" r="3.0" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="370" cy="260" r="2.5" fill="#A78BFA" opacity="0.85"/>
+  <circle cx="140" cy="260" r="3.5" fill="#4FACFE" opacity="0.8"/>
+
+  <!-- Acoustic Mic Wave Ring Silhouette -->
+  <circle cx="256" cy="256" r="140" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" stroke-dasharray="8 12"/>
+  <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.5" stroke-dasharray="14 18"/>
+</svg>
